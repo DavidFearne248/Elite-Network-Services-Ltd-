@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Elite Network Services Ltd | Scrap Waste Recycling & Material Recovery</title>
-  <meta name="description" content="Elite Network Services Ltd provides premium scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste collection enquiries." />
+  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, non-ferrous metal recovery, commercial recycling support and material recovery services." />
 
   <style>
     :root{
@@ -22,7 +22,9 @@
     }
 
     *{box-sizing:border-box;margin:0;padding:0}
+
     html{scroll-behavior:smooth}
+
     body{
       font-family:Arial,Helvetica,sans-serif;
       background:var(--cream);
@@ -30,20 +32,25 @@
       line-height:1.6;
       overflow-x:hidden;
     }
+
     a{text-decoration:none;color:inherit}
-    .container{width:min(1200px,calc(100% - 32px));margin:auto}
+
+    .container{
+      width:min(1200px,calc(100% - 32px));
+      margin:auto;
+    }
 
     header{
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(244,241,232,.92);
+      background:rgba(244,241,232,.94);
       backdrop-filter:blur(16px);
       border-bottom:1px solid rgba(7,16,13,.08);
     }
 
     .nav{
-      height:84px;
+      height:88px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -53,26 +60,69 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:14px;
+      gap:15px;
     }
 
     .brand-mark{
-      width:58px;
-      height:58px;
-      border-radius:18px;
-      background:
-        linear-gradient(135deg,rgba(255,255,255,.18),transparent),
-        linear-gradient(135deg,var(--black),var(--green));
-      color:#fff;
+      width:66px;
+      height:66px;
+      border-radius:50%;
+      position:relative;
       display:grid;
       place-items:center;
-      font-weight:900;
-      letter-spacing:1px;
-      box-shadow:0 18px 40px rgba(47,125,79,.25);
+      background:
+        conic-gradient(from 20deg,var(--gold),var(--green2),var(--green),var(--gold));
+      box-shadow:0 18px 45px rgba(47,125,79,.28);
+      overflow:hidden;
+      flex-shrink:0;
     }
 
-    .brand strong{display:block;font-size:18px;line-height:1.1}
-    .brand span{display:block;color:var(--grey);font-size:13px}
+    .brand-mark:before{
+      content:"";
+      position:absolute;
+      inset:7px;
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--black),#183224);
+    }
+
+    .brand-mark:after{
+      content:"";
+      position:absolute;
+      width:32px;
+      height:32px;
+      border:4px solid var(--gold);
+      border-left-color:transparent;
+      border-bottom-color:var(--green2);
+      border-radius:50%;
+      z-index:2;
+      transform:rotate(-18deg);
+    }
+
+    .brand-logo-text{
+      position:relative;
+      z-index:3;
+      font-size:12px;
+      font-weight:900;
+      color:#fff;
+      letter-spacing:-1px;
+    }
+
+    .brand strong{
+      display:block;
+      font-size:20px;
+      line-height:1;
+      letter-spacing:1.2px;
+      text-transform:uppercase;
+    }
+
+    .brand span{
+      display:block;
+      color:var(--grey);
+      font-size:12px;
+      letter-spacing:1px;
+      text-transform:uppercase;
+      margin-top:5px;
+    }
 
     nav{
       display:flex;
@@ -83,6 +133,7 @@
     }
 
     nav a:hover{color:var(--green)}
+
     .nav-cta{
       background:var(--black);
       color:#fff;
@@ -92,13 +143,13 @@
 
     .hero{
       position:relative;
-      min-height:calc(100vh - 84px);
-      padding:86px 0 70px;
+      min-height:calc(100vh - 88px);
+      padding:88px 0 74px;
       display:flex;
       align-items:center;
       background:
-        radial-gradient(circle at 12% 15%,rgba(117,182,107,.28),transparent 30%),
-        radial-gradient(circle at 88% 12%,rgba(215,173,89,.22),transparent 35%),
+        radial-gradient(circle at 12% 15%,rgba(117,182,107,.30),transparent 30%),
+        radial-gradient(circle at 88% 12%,rgba(215,173,89,.24),transparent 35%),
         linear-gradient(180deg,#fff 0%,var(--cream) 100%);
       overflow:hidden;
     }
@@ -117,7 +168,7 @@
     .hero-grid{
       display:grid;
       grid-template-columns:1.05fr .95fr;
-      gap:54px;
+      gap:58px;
       align-items:center;
       position:relative;
       z-index:2;
@@ -138,6 +189,8 @@
       letter-spacing:-4px;
       margin-bottom:26px;
     }
+
+    .highlight{color:var(--green)}
 
     .lead{
       font-size:21px;
@@ -176,11 +229,6 @@
       color:#fff;
     }
 
-    .btn-dark{
-      background:var(--black);
-      color:#fff;
-    }
-
     .btn-light{
       background:#fff;
       border-color:var(--line);
@@ -215,8 +263,8 @@
       height:500px;
       border-radius:40px;
       background:
-        linear-gradient(rgba(7,16,13,.08),rgba(7,16,13,.35)),
-        radial-gradient(circle at 20% 20%,rgba(215,173,89,.36),transparent 22%),
+        radial-gradient(circle at 22% 24%,rgba(215,173,89,.45),transparent 18%),
+        radial-gradient(circle at 70% 68%,rgba(117,182,107,.26),transparent 25%),
         linear-gradient(135deg,#18261f 0%,#314d39 45%,#101b16 100%);
       box-shadow:var(--shadow);
       overflow:hidden;
@@ -226,14 +274,10 @@
       content:"";
       position:absolute;
       inset:0;
-      background-image:
-        linear-gradient(30deg,rgba(255,255,255,.08) 12%,transparent 12.5%,transparent 87%,rgba(255,255,255,.08) 87.5%,rgba(255,255,255,.08)),
-        linear-gradient(150deg,rgba(255,255,255,.08) 12%,transparent 12.5%,transparent 87%,rgba(255,255,255,.08) 87.5%,rgba(255,255,255,.08)),
-        linear-gradient(30deg,rgba(255,255,255,.08) 12%,transparent 12.5%,transparent 87%,rgba(255,255,255,.08) 87.5%,rgba(255,255,255,.08)),
-        linear-gradient(150deg,rgba(255,255,255,.08) 12%,transparent 12.5%,transparent 87%,rgba(255,255,255,.08) 87.5%,rgba(255,255,255,.08));
-      background-size:80px 140px;
-      background-position:0 0,0 0,40px 70px,40px 70px;
-      opacity:.22;
+      background:
+        repeating-linear-gradient(120deg,rgba(255,255,255,.08) 0 2px,transparent 2px 22px),
+        repeating-linear-gradient(30deg,rgba(255,255,255,.05) 0 2px,transparent 2px 30px);
+      opacity:.34;
     }
 
     .metal-stack{
@@ -243,6 +287,7 @@
       right:46px;
       display:grid;
       gap:12px;
+      z-index:2;
     }
 
     .beam{
@@ -252,8 +297,8 @@
       box-shadow:inset 0 2px 0 rgba(255,255,255,.55),0 12px 22px rgba(0,0,0,.2);
     }
 
-    .beam:nth-child(2){width:86%;margin-left:auto}
-    .beam:nth-child(3){width:72%}
+    .beam:nth-child(2){width:86%;margin-left:auto;background:linear-gradient(90deg,#6d3b21,#d18445,#f0b070)}
+    .beam:nth-child(3){width:72%;background:linear-gradient(90deg,#8f732d,#d7ad59,#f2d98a)}
 
     .floating{
       position:absolute;
@@ -262,6 +307,7 @@
       border-radius:24px;
       padding:20px;
       box-shadow:0 20px 50px rgba(7,16,13,.18);
+      z-index:3;
     }
 
     .floating strong{display:block;font-size:24px}
@@ -361,61 +407,16 @@
       margin-bottom:22px;
     }
 
-    .icon svg{width:30px;height:30px;stroke:var(--green);stroke-width:2.5;fill:none}
+    .icon svg{
+      width:30px;
+      height:30px;
+      stroke:var(--green);
+      stroke-width:2.5;
+      fill:none;
+    }
+
     .service h3{font-size:24px;margin-bottom:12px}
     .service p{color:var(--grey)}
-
-    .dark{
-      background:
-        radial-gradient(circle at 15% 20%,rgba(117,182,107,.16),transparent 30%),
-        linear-gradient(135deg,var(--black),var(--black2));
-      color:#fff;
-    }
-
-    .split{
-      display:grid;
-      grid-template-columns:1fr .9fr;
-      gap:54px;
-      align-items:center;
-    }
-
-    .dark p{color:#dbe6dc;margin-bottom:16px}
-
-    .image-panel{
-      height:560px;
-      border-radius:40px;
-      background:
-        linear-gradient(rgba(7,16,13,.08),rgba(7,16,13,.62)),
-        radial-gradient(circle at 30% 15%,rgba(215,173,89,.4),transparent 22%),
-        linear-gradient(135deg,#2e4d38,#121f19 65%);
-      box-shadow:0 30px 90px rgba(0,0,0,.28);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .image-panel:before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.07) 34px 36px),
-        repeating-linear-gradient(0deg,transparent 0 34px,rgba(255,255,255,.06) 34px 36px);
-      opacity:.35;
-    }
-
-    .image-panel .label{
-      position:absolute;
-      left:28px;
-      bottom:28px;
-      background:rgba(255,255,255,.94);
-      color:var(--black);
-      border-radius:24px;
-      padding:22px;
-      width:calc(100% - 56px);
-    }
-
-    .label strong{display:block;font-size:28px;line-height:1.05}
-    .label span{color:var(--grey);font-weight:800}
 
     .materials{
       background:#fff;
@@ -433,6 +434,12 @@
       padding:24px;
       background:linear-gradient(180deg,#fff,var(--cream));
       min-height:150px;
+      transition:.25s ease;
+    }
+
+    .material:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 44px rgba(7,16,13,.1);
     }
 
     .material strong{display:block;font-size:20px;margin-bottom:8px}
@@ -454,6 +461,74 @@
 
     .stat strong{display:block;font-size:36px;color:var(--green);line-height:1}
     .stat span{color:var(--grey);font-weight:800}
+
+    .dark{
+      background:
+        radial-gradient(circle at 15% 20%,rgba(117,182,107,.16),transparent 30%),
+        linear-gradient(135deg,var(--black),var(--black2));
+      color:#fff;
+    }
+
+    .split{
+      display:grid;
+      grid-template-columns:1fr .9fr;
+      gap:54px;
+      align-items:center;
+    }
+
+    .dark p{color:#dbe6dc;margin-bottom:16px}
+
+    .image-panel{
+      height:560px;
+      border-radius:40px;
+      background:
+        radial-gradient(circle at 28% 22%,rgba(215,173,89,.42),transparent 19%),
+        radial-gradient(circle at 68% 68%,rgba(117,182,107,.28),transparent 26%),
+        linear-gradient(135deg,#2e4d38,#121f19 65%);
+      box-shadow:0 30px 90px rgba(0,0,0,.28);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .image-panel:before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.07) 34px 36px),
+        repeating-linear-gradient(0deg,transparent 0 34px,rgba(255,255,255,.06) 34px 36px);
+      opacity:.35;
+    }
+
+    .image-panel:after{
+      content:"";
+      position:absolute;
+      width:280px;
+      height:180px;
+      right:40px;
+      top:80px;
+      background:
+        linear-gradient(90deg,#8f4b25,#d18445,#f1b077);
+      border-radius:30px;
+      transform:rotate(-16deg);
+      box-shadow:0 30px 55px rgba(0,0,0,.28);
+      opacity:.86;
+    }
+
+    .image-panel .label{
+      position:absolute;
+      left:28px;
+      bottom:28px;
+      background:rgba(255,255,255,.94);
+      color:var(--black);
+      border-radius:24px;
+      padding:22px;
+      width:calc(100% - 56px);
+      z-index:2;
+    }
+
+    .label strong{display:block;font-size:28px;line-height:1.05}
+    .label span{color:var(--grey);font-weight:800}
 
     .process-grid{
       display:grid;
@@ -618,7 +693,12 @@
     }
 
     textarea{resize:vertical}
-    .form-note{font-size:13px;color:var(--grey);margin-top:14px}
+
+    .form-note{
+      font-size:13px;
+      color:var(--grey);
+      margin-top:14px;
+    }
 
     footer{
       background:#08100d;
@@ -659,7 +739,10 @@
       font-size:14px;
     }
 
-    .mobile-cta a:last-child{background:#fff;color:var(--black)}
+    .mobile-cta a:last-child{
+      background:#fff;
+      color:var(--black);
+    }
 
     @media(max-width:960px){
       nav{display:none}
@@ -684,7 +767,8 @@
       .visual-card{height:390px;border-radius:30px}
       .float-two{display:none}
       .brand strong{font-size:15px}
-      .brand-mark{width:50px;height:50px}
+      .brand span{font-size:10px}
+      .brand-mark{width:52px;height:52px}
       .section-head h2,.split h2,.contact h2{letter-spacing:-1.5px}
     }
   </style>
@@ -694,10 +778,12 @@
   <header>
     <div class="container nav">
       <a class="brand" href="#top">
-        <div class="brand-mark">ENS</div>
+        <div class="brand-mark">
+          <div class="brand-logo-text">ENS</div>
+        </div>
         <div>
-          <strong>Elite Network Services Ltd</strong>
-          <span>Scrap Waste Recycling</span>
+          <strong>Elite Network Services</strong>
+          <span>Scrap Waste Recycling & Material Recovery</span>
         </div>
       </a>
 
@@ -716,7 +802,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Registered UK Limited Company • Company No. 15265839</p>
-          <h1>Premium Scrap Waste Recycling & Material Recovery</h1>
+          <h1>Premium Scrap Waste Recycling <span class="highlight">& Material Recovery</span></h1>
           <p class="lead">
             Elite Network Services Ltd helps businesses, trades, industrial sites and domestic customers move recyclable waste responsibly, quickly and professionally.
           </p>
@@ -896,29 +982,10 @@
         </div>
 
         <div class="process-grid">
-          <div class="step">
-            <div class="step-number">1</div>
-            <h3>Contact</h3>
-            <p>Call or email with the material type, quantity, location and photos where possible.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">2</div>
-            <h3>Assess</h3>
-            <p>We review whether the material is suitable for recycling, recovery or collection support.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">3</div>
-            <h3>Quote</h3>
-            <p>You receive clear guidance or a quote based on the material and service required.</p>
-          </div>
-
-          <div class="step">
-            <div class="step-number">4</div>
-            <h3>Arrange</h3>
-            <p>Where suitable, we arrange the next step professionally and efficiently.</p>
-          </div>
+          <div class="step"><div class="step-number">1</div><h3>Contact</h3><p>Call or email with the material type, quantity, location and photos where possible.</p></div>
+          <div class="step"><div class="step-number">2</div><h3>Assess</h3><p>We review whether the material is suitable for recycling, recovery or collection support.</p></div>
+          <div class="step"><div class="step-number">3</div><h3>Quote</h3><p>You receive clear guidance or a quote based on the material and service required.</p></div>
+          <div class="step"><div class="step-number">4</div><h3>Arrange</h3><p>Where suitable, we arrange the next step professionally and efficiently.</p></div>
         </div>
       </div>
     </section>
@@ -949,9 +1016,7 @@
           <p><strong>Main Focus:</strong> Scrap Waste Recycling & Material Recovery</p>
           <p><strong>Phone:</strong> 07553 337751</p>
           <p><strong>Email:</strong> elite.network.services@hotmail.com</p>
-          <p>
-            Businesses that transport, broker, deal in, buy, sell or store waste/scrap may need appropriate registrations, licences or permissions depending on the exact activity.
-          </p>
+          <p>Businesses that transport, broker, deal in, buy, sell or store waste/scrap may need appropriate registrations, licences or permissions depending on the exact activity.</p>
         </div>
       </div>
     </section>
@@ -964,35 +1029,12 @@
         </div>
 
         <div class="faq-grid">
-          <details>
-            <summary>Do you collect scrap waste?</summary>
-            <p>Collection may be available depending on the material, quantity and location. Send photos and details for assessment.</p>
-          </details>
-
-          <details>
-            <summary>Do you work with commercial customers?</summary>
-            <p>Yes. We welcome enquiries from businesses, trades, warehouses, industrial sites, yards and commercial premises.</p>
-          </details>
-
-          <details>
-            <summary>What information should I send?</summary>
-            <p>Please send the material type, approximate quantity, photos, location and preferred collection timescale.</p>
-          </details>
-
-          <details>
-            <summary>Do you handle hazardous waste?</summary>
-            <p>This site focuses on scrap waste recycling and suitable non-hazardous recyclable materials. Hazardous waste would need separate assessment.</p>
-          </details>
-
-          <details>
-            <summary>Can domestic customers enquire?</summary>
-            <p>Yes. Domestic enquiries are welcome where the material is suitable for recycling or recovery support.</p>
-          </details>
-
-          <details>
-            <summary>How quickly do you respond?</summary>
-            <p>We aim to respond promptly. For the fastest response, call directly or email photos and details.</p>
-          </details>
+          <details><summary>Do you collect scrap waste?</summary><p>Collection may be available depending on the material, quantity and location. Send photos and details for assessment.</p></details>
+          <details><summary>Do you work with commercial customers?</summary><p>Yes. We welcome enquiries from businesses, trades, warehouses, industrial sites, yards and commercial premises.</p></details>
+          <details><summary>What information should I send?</summary><p>Please send the material type, approximate quantity, photos, location and preferred collection timescale.</p></details>
+          <details><summary>Do you handle hazardous waste?</summary><p>This site focuses on scrap waste recycling and suitable non-hazardous recyclable materials. Hazardous waste would need separate assessment.</p></details>
+          <details><summary>Can domestic customers enquire?</summary><p>Yes. Domestic enquiries are welcome where the material is suitable for recycling or recovery support.</p></details>
+          <details><summary>How quickly do you respond?</summary><p>We aim to respond promptly. For the fastest response, call directly or email photos and details.</p></details>
         </div>
       </div>
     </section>
@@ -1017,33 +1059,15 @@
           </p>
 
           <div class="contact-methods">
-            <a href="tel:07553337751">
-              <strong>Phone</strong>
-              <span>07553 337751</span>
-            </a>
-
-            <a href="mailto:elite.network.services@hotmail.com">
-              <strong>Email</strong>
-              <span>elite.network.services@hotmail.com</span>
-            </a>
+            <a href="tel:07553337751"><strong>Phone</strong><span>07553 337751</span></a>
+            <a href="mailto:elite.network.services@hotmail.com"><strong>Email</strong><span>elite.network.services@hotmail.com</span></a>
           </div>
         </div>
 
         <form action="mailto:elite.network.services@hotmail.com" method="post" enctype="text/plain">
-          <label>
-            Your Name
-            <input type="text" name="name" placeholder="Your name" />
-          </label>
-
-          <label>
-            Phone Number
-            <input type="tel" name="phone" placeholder="Your phone number" />
-          </label>
-
-          <label>
-            Email Address
-            <input type="email" name="email" placeholder="Your email address" />
-          </label>
+          <label>Your Name<input type="text" name="name" placeholder="Your name" /></label>
+          <label>Phone Number<input type="tel" name="phone" placeholder="Your phone number" /></label>
+          <label>Email Address<input type="email" name="email" placeholder="Your email address" /></label>
 
           <label>
             Service Required
@@ -1073,7 +1097,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Elite Network Services Ltd</strong>
-        <p>Scrap Waste Recycling & Material Recovery Services</p>
+        <p>Non-ferrous scrap recycling, material recovery and commercial waste support.</p>
       </div>
 
       <div>
