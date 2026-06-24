@@ -3,617 +3,144 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Elite Network Services Ltd | Scrap Waste Recycling & Material Recovery</title>
-  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste collection services." />
+  <meta name="description" content="Elite Network Services Ltd provides professional scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste services." />
 
   <style>
-    :root {
-      --black: #101815;
-      --dark: #17231e;
-      --green: #3f7d58;
-      --lime: #9fc46b;
-      --cream: #f6f4ec;
-      --white: #ffffff;
-      --grey: #66736b;
-      --border: #dde5dd;
-      --shadow: 0 20px 60px rgba(16, 24, 21, 0.14);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--black);
-      line-height: 1.6;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .container {
-      width: min(1180px, calc(100% - 32px));
-      margin: auto;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      background: rgba(246, 244, 236, 0.94);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .nav {
-      height: 82px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-
-    .logo-mark {
-      width: 54px;
-      height: 54px;
-      border-radius: 16px;
-      background: linear-gradient(135deg, var(--black), var(--green));
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      letter-spacing: 1px;
-      box-shadow: var(--shadow);
-    }
-
-    .logo strong {
-      display: block;
-      font-size: 18px;
-      line-height: 1.1;
-    }
-
-    .logo span {
-      display: block;
-      color: var(--grey);
-      font-size: 13px;
-    }
-
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      font-weight: 700;
-      font-size: 14px;
-    }
-
-    nav a:hover {
-      color: var(--green);
-    }
-
-    .nav-button {
-      background: var(--green);
-      color: var(--white);
-      padding: 12px 18px;
-      border-radius: 999px;
-    }
-
-    .hero {
-      padding: 94px 0 76px;
-      background:
-        radial-gradient(circle at 15% 15%, rgba(159, 196, 107, 0.28), transparent 32%),
-        radial-gradient(circle at 88% 8%, rgba(63, 125, 88, 0.16), transparent 35%),
-        linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
-    }
-
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 54px;
-      align-items: center;
-    }
-
-    .eyebrow {
-      color: var(--green);
-      text-transform: uppercase;
-      font-weight: 900;
-      letter-spacing: 2px;
-      font-size: 12px;
-      margin-bottom: 14px;
-    }
-
-    h1 {
-      font-size: clamp(42px, 6vw, 78px);
-      line-height: 0.98;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-      color: var(--black);
-    }
-
-    .lead {
-      font-size: 20px;
-      color: #4f5f55;
-      max-width: 700px;
-      margin-bottom: 32px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-bottom: 30px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 50px;
-      padding: 0 24px;
-      border-radius: 999px;
-      font-weight: 900;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--green);
-      color: var(--white);
-      box-shadow: 0 14px 28px rgba(63, 125, 88, 0.24);
-    }
-
-    .btn-dark {
-      background: var(--black);
-      color: var(--white);
-    }
-
-    .btn-outline {
-      background: var(--white);
-      border-color: var(--border);
-      color: var(--black);
-    }
-
-    .trust-pills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .trust-pills span {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 999px;
-      padding: 9px 13px;
-      font-weight: 700;
-      color: #435047;
-      font-size: 14px;
-    }
-
-    .quote-card {
-      background: var(--dark);
-      color: var(--white);
-      border-radius: 34px;
-      padding: 34px;
-      box-shadow: var(--shadow);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .quote-card::after {
-      content: "";
-      position: absolute;
-      right: -80px;
-      bottom: -80px;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-      background: rgba(159, 196, 107, 0.22);
-    }
-
-    .quote-card h2 {
-      font-size: 32px;
-      line-height: 1.1;
-      margin-bottom: 18px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .quote-card ul {
-      padding-left: 20px;
-      margin-bottom: 24px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .quote-card li {
-      margin: 10px 0;
-      color: #e8f0e9;
-    }
-
-    .quote-card .btn {
-      position: relative;
-      z-index: 2;
-    }
-
-    .strip {
-      background: var(--white);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      padding: 26px 0;
-    }
-
-    .strip-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .strip strong {
-      display: block;
-      color: var(--black);
-      font-size: 18px;
-    }
-
-    .strip span {
-      color: var(--grey);
-      font-size: 14px;
-    }
-
-    section {
-      padding: 88px 0;
-    }
-
-    .section-heading {
-      max-width: 780px;
-      margin-bottom: 42px;
-    }
-
-    .section-heading h2,
-    .split h2,
-    .contact h2 {
-      font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.05;
-      letter-spacing: -2px;
-      margin-bottom: 16px;
-    }
-
-    .section-heading p {
-      color: var(--grey);
-      font-size: 18px;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: 0 12px 34px rgba(16, 24, 21, 0.06);
-    }
-
-    .service-number {
-      width: 46px;
-      height: 46px;
-      border-radius: 15px;
-      background: #eef5e9;
-      color: var(--green);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-
-    .service-card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      color: var(--grey);
-    }
-
-    .dark-section {
-      background: var(--dark);
-      color: var(--white);
-    }
-
-    .split {
-      display: grid;
-      grid-template-columns: 1fr 0.9fr;
-      gap: 48px;
-      align-items: center;
-    }
-
-    .dark-section p {
-      color: #d9e4da;
-      margin-bottom: 16px;
-    }
-
-    .info-box {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.13);
-      border-radius: 30px;
-      padding: 30px;
-    }
-
-    .info-row {
-      display: flex;
-      justify-content: space-between;
-      gap: 18px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-      padding: 14px 0;
-    }
-
-    .info-row:last-child {
-      border-bottom: 0;
-    }
-
-    .info-row span {
-      color: #bdcabe;
-    }
-
-    .info-row strong {
-      text-align: right;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-
-    .step {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 26px;
-      padding: 26px;
-    }
-
-    .step span {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      background: var(--black);
-      color: var(--white);
-      display: grid;
-      place-items: center;
-      font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    .step h3 {
-      margin-bottom: 8px;
-    }
-
-    .step p {
-      color: var(--grey);
-    }
-
-    .compliance {
-      background: #edf2ea;
-    }
-
-    .check-list {
-      list-style: none;
-      margin-top: 24px;
-    }
-
-    .check-list li {
-      position: relative;
-      padding: 8px 0 8px 32px;
-      font-weight: 700;
-    }
-
-    .check-list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--green);
-      font-weight: 900;
-    }
-
-    .notice {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 28px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    .notice h3 {
-      font-size: 26px;
-      margin-bottom: 12px;
-    }
-
-    .notice p {
-      color: var(--grey);
-      margin-bottom: 12px;
-    }
-
-    .cta {
-      background: linear-gradient(135deg, var(--green), var(--black));
-      color: var(--white);
-      padding: 54px 0;
-    }
-
-    .cta-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 26px;
-    }
-
-    .cta h2 {
-      font-size: 38px;
-      margin-bottom: 6px;
-    }
-
-    .cta p {
-      color: #e7efe7;
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 0.85fr 1.15fr;
-      gap: 44px;
-      align-items: start;
-    }
-
-    .contact-methods {
-      display: grid;
-      gap: 12px;
-      margin-top: 26px;
-    }
-
-    .contact-methods a {
-      display: block;
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 18px;
-    }
-
-    .contact-methods strong {
-      display: block;
-      color: var(--black);
-      margin-bottom: 4px;
-    }
-
-    .contact-methods span {
-      color: var(--green);
-      font-weight: 900;
-      word-break: break-word;
-    }
-
-    form {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 30px;
-      padding: 30px;
-      box-shadow: var(--shadow);
-    }
-
-    label {
-      display: block;
-      font-weight: 900;
-      margin-bottom: 16px;
-    }
-
-    input,
-    textarea,
-    select {
-      width: 100%;
-      margin-top: 8px;
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 14px 15px;
-      font: inherit;
-      background: #fbfcf8;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    .form-note {
-      font-size: 13px;
-      color: var(--grey);
-      margin-top: 14px;
-    }
-
-    footer {
-      background: #0d1411;
-      color: #dce6dc;
-      padding: 34px 0;
-    }
-
-    .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      gap: 24px;
-    }
-
-    footer p {
-      color: #aebbae;
-      margin-top: 4px;
-    }
-
-    @media (max-width: 900px) {
-      nav {
-        display: none;
-      }
-
-      .hero-grid,
-      .split,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .process-grid,
-      .strip-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .cta-inner,
-      .footer-grid {
-        display: block;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .container {
-        width: min(100% - 24px, 1180px);
-      }
-
-      .hero {
-        padding: 58px 0;
-      }
-
-      section {
-        padding: 58px 0;
-      }
-
-      h1 {
-        letter-spacing: -2px;
-      }
-
-      .buttons .btn {
-        width: 100%;
-      }
-
-      .services-grid,
-      .process-grid,
-      .strip-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .logo strong {
-        font-size: 15px;
-      }
+    :root{
+      --black:#0b1110;
+      --dark:#14211d;
+      --green:#2f7d4f;
+      --green2:#81b65f;
+      --gold:#d4aa55;
+      --cream:#f5f3ea;
+      --white:#ffffff;
+      --grey:#657069;
+      --border:#dde4dc;
+      --shadow:0 24px 70px rgba(11,17,16,.16);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--black);line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1180px,calc(100% - 32px));margin:auto}
+
+    header{position:sticky;top:0;z-index:99;background:rgba(245,243,234,.95);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .mark{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,var(--black),var(--green));color:#fff;display:grid;place-items:center;font-weight:900;letter-spacing:1px;box-shadow:var(--shadow)}
+    .brand strong{display:block;font-size:18px;line-height:1.1}
+    .brand span{display:block;font-size:13px;color:var(--grey)}
+    nav{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800}
+    nav a:hover{color:var(--green)}
+    .nav-cta{background:var(--green);color:#fff;padding:12px 18px;border-radius:999px}
+
+    .hero{padding:94px 0 76px;background:
+      radial-gradient(circle at 14% 20%,rgba(129,182,95,.28),transparent 30%),
+      radial-gradient(circle at 86% 10%,rgba(212,170,85,.20),transparent 34%),
+      linear-gradient(180deg,#fff 0%,var(--cream) 100%)}
+    .hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center}
+    .eyebrow{text-transform:uppercase;letter-spacing:2px;color:var(--green);font-weight:900;font-size:12px;margin-bottom:14px}
+    h1{font-size:clamp(42px,6vw,78px);line-height:.98;letter-spacing:-3px;margin-bottom:24px}
+    .lead{font-size:20px;color:#4e5c54;max-width:720px;margin-bottom:32px}
+    .buttons{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:28px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:999px;font-weight:900;border:1px solid transparent;cursor:pointer}
+    .btn-primary{background:var(--green);color:#fff;box-shadow:0 14px 28px rgba(47,125,79,.25)}
+    .btn-dark{background:var(--black);color:#fff}
+    .btn-light{background:#fff;border-color:var(--border);color:var(--black)}
+    .pills{display:flex;flex-wrap:wrap;gap:10px}
+    .pills span{background:#fff;border:1px solid var(--border);border-radius:999px;padding:9px 13px;font-size:14px;font-weight:800;color:#3f4c45}
+
+    .quote-card{background:var(--dark);color:#fff;border-radius:34px;padding:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+    .quote-card:after{content:"";position:absolute;right:-70px;bottom:-80px;width:220px;height:220px;background:rgba(129,182,95,.22);border-radius:50%}
+    .quote-card h2{font-size:34px;line-height:1.08;margin-bottom:18px;position:relative;z-index:1}
+    .quote-card ul{padding-left:20px;margin-bottom:24px;position:relative;z-index:1}
+    .quote-card li{margin:10px 0;color:#e8f0e9}
+    .quote-card .btn{position:relative;z-index:1}
+
+    .strip{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:26px 0}
+    .strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .strip strong{display:block;font-size:18px}
+    .strip span{font-size:14px;color:var(--grey)}
+
+    section{padding:88px 0}
+    .section-heading{max-width:790px;margin-bottom:42px}
+    .section-heading h2,.split h2,.contact h2{font-size:clamp(34px,4vw,56px);line-height:1.05;letter-spacing:-2px;margin-bottom:16px}
+    .section-heading p{font-size:18px;color:var(--grey)}
+
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:#fff;border:1px solid var(--border);border-radius:28px;padding:30px;box-shadow:0 12px 34px rgba(11,17,16,.06)}
+    .num{width:46px;height:46px;border-radius:15px;background:#edf5e9;color:var(--green);display:grid;place-items:center;font-weight:900;margin-bottom:18px}
+    .card h3{font-size:22px;margin-bottom:10px}
+    .card p{color:var(--grey)}
+
+    .dark{background:var(--dark);color:#fff}
+    .dark p{color:#dbe5dc;margin-bottom:16px}
+    .split{display:grid;grid-template-columns:1fr .9fr;gap:48px;align-items:center}
+    .info-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:30px}
+    .info-row{display:flex;justify-content:space-between;gap:18px;border-bottom:1px solid rgba(255,255,255,.14);padding:14px 0}
+    .info-row:last-child{border-bottom:0}
+    .info-row span{color:#bdcabe}
+    .info-row strong{text-align:right}
+
+    .materials{background:#fff}
+    .material-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .material{border:1px solid var(--border);background:var(--cream);border-radius:18px;padding:18px;font-weight:900}
+    .material small{display:block;color:var(--grey);font-weight:600;margin-top:4px}
+
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .step{background:#fff;border:1px solid var(--border);border-radius:26px;padding:26px}
+    .step span{width:42px;height:42px;border-radius:50%;background:var(--black);color:#fff;display:grid;place-items:center;font-weight:900;margin-bottom:16px}
+    .step p{color:var(--grey)}
+
+    .compliance{background:#edf2ea}
+    .check-list{list-style:none;margin-top:22px}
+    .check-list li{position:relative;padding:8px 0 8px 32px;font-weight:800}
+    .check-list li:before{content:"✓";position:absolute;left:0;color:var(--green);font-weight:900}
+    .notice{background:#fff;border:1px solid var(--border);border-radius:28px;padding:30px;box-shadow:var(--shadow)}
+    .notice h3{font-size:26px;margin-bottom:12px}
+    .notice p{color:var(--grey);margin-bottom:12px}
+
+    .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    details{background:#fff;border:1px solid var(--border);border-radius:20px;padding:20px}
+    summary{font-weight:900;cursor:pointer}
+    details p{color:var(--grey);margin-top:12px}
+
+    .cta{background:linear-gradient(135deg,var(--green),var(--black));color:#fff;padding:54px 0}
+    .cta-inner{display:flex;align-items:center;justify-content:space-between;gap:26px}
+    .cta h2{font-size:38px;margin-bottom:6px}
+    .cta p{color:#e8f0e9}
+
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:44px;align-items:start}
+    .contact-methods{display:grid;gap:12px;margin-top:26px}
+    .contact-methods a{display:block;background:#fff;border:1px solid var(--border);border-radius:20px;padding:18px}
+    .contact-methods strong{display:block;margin-bottom:4px}
+    .contact-methods span{color:var(--green);font-weight:900;word-break:break-word}
+    form{background:#fff;border:1px solid var(--border);border-radius:30px;padding:30px;box-shadow:var(--shadow)}
+    label{display:block;font-weight:900;margin-bottom:16px}
+    input,textarea,select{width:100%;margin-top:8px;border:1px solid var(--border);border-radius:14px;padding:14px 15px;font:inherit;background:#fbfcf8}
+    textarea{resize:vertical}
+    .form-note{font-size:13px;color:var(--grey);margin-top:14px}
+
+    footer{background:#0d1411;color:#dce6dc;padding:34px 0}
+    .footer-grid{display:flex;justify-content:space-between;gap:24px}
+    footer p{color:#aebbae;margin-top:4px}
+
+    @media(max-width:900px){
+      nav{display:none}
+      .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:repeat(2,1fr)}
+      .process,.strip-grid,.material-grid,.faq-grid{grid-template-columns:repeat(2,1fr)}
+      .cta-inner,.footer-grid{display:block}
+    }
+    @media(max-width:560px){
+      .container{width:min(100% - 24px,1180px)}
+      .hero,section{padding:58px 0}
+      h1{letter-spacing:-2px}
+      .buttons .btn{width:100%}
+      .grid-3,.process,.strip-grid,.material-grid,.faq-grid{grid-template-columns:1fr}
+      .brand strong{font-size:15px}
     }
   </style>
 </head>
@@ -621,20 +148,19 @@
 <body>
   <header>
     <div class="container nav">
-      <a href="#top" class="logo">
-        <div class="logo-mark">ENS</div>
+      <a href="#top" class="brand">
+        <div class="mark">ENS</div>
         <div>
           <strong>Elite Network Services Ltd</strong>
           <span>Scrap Waste Recycling</span>
         </div>
       </a>
-
       <nav>
         <a href="#services">Services</a>
+        <a href="#materials">Materials</a>
         <a href="#about">About</a>
-        <a href="#process">How It Works</a>
         <a href="#company">Company Info</a>
-        <a href="#contact" class="nav-button">Get a Quote</a>
+        <a href="#contact" class="nav-cta">Get a Quote</a>
       </nav>
     </div>
   </header>
@@ -646,29 +172,29 @@
           <p class="eyebrow">Registered UK Limited Company • Company No. 15265839</p>
           <h1>Scrap Waste Recycling & Material Recovery Services</h1>
           <p class="lead">
-            Elite Network Services Ltd provides professional scrap waste recycling, material recovery and commercial recycling support for customers who need a reliable and straightforward service.
+            Professional recycling support for businesses, trades, industrial sites and domestic customers. We help recover value from scrap waste and move recyclable materials responsibly.
           </p>
 
           <div class="buttons">
             <a href="tel:07553337751" class="btn btn-primary">Call 07553 337751</a>
-            <a href="mailto:elite.network.services@hotmail.com" class="btn btn-outline">Email Us</a>
+            <a href="mailto:elite.network.services@hotmail.com" class="btn btn-light">Email for a Quote</a>
           </div>
 
-          <div class="trust-pills">
+          <div class="pills">
             <span>Commercial & Domestic</span>
-            <span>Scrap Waste Recycling</span>
+            <span>Scrap Waste</span>
             <span>Material Recovery</span>
             <span>Fast Enquiries</span>
           </div>
         </div>
 
         <div class="quote-card">
-          <h2>Need a recycling quote?</h2>
+          <h2>Get a fast recycling quote</h2>
           <ul>
             <li>Tell us what material you have</li>
-            <li>Send approximate quantity and location</li>
-            <li>Receive clear next steps</li>
-            <li>Arrange collection where suitable</li>
+            <li>Send quantity, photos and location</li>
+            <li>We assess the best recycling route</li>
+            <li>Collection arranged where suitable</li>
           </ul>
           <a href="#contact" class="btn btn-primary">Request a Quote</a>
         </div>
@@ -677,150 +203,91 @@
 
     <div class="strip">
       <div class="container strip-grid">
-        <div>
-          <strong>Reliable Service</strong>
-          <span>Clear communication from enquiry to collection.</span>
-        </div>
-        <div>
-          <strong>Recycling Focused</strong>
-          <span>Helping recover useful materials from waste.</span>
-        </div>
-        <div>
-          <strong>Business Ready</strong>
-          <span>Supporting commercial and industrial customers.</span>
-        </div>
-        <div>
-          <strong>Genuine Company</strong>
-          <span>UK limited company details displayed clearly.</span>
-        </div>
+        <div><strong>Scrap Recycling</strong><span>Support for recyclable waste streams.</span></div>
+        <div><strong>Material Recovery</strong><span>Recovering value from usable materials.</span></div>
+        <div><strong>Business Support</strong><span>Commercial and industrial enquiries welcome.</span></div>
+        <div><strong>Genuine Company</strong><span>UK company details clearly displayed.</span></div>
       </div>
     </div>
 
     <section id="services">
       <div class="container">
         <div class="section-heading">
-          <p class="eyebrow">What we do</p>
-          <h2>Professional recycling and waste support</h2>
-          <p>
-            We help customers deal with scrap waste and recyclable materials in a practical, professional and responsible way.
-          </p>
+          <p class="eyebrow">Services</p>
+          <h2>Recycling services built around speed, clarity and responsible handling.</h2>
+          <p>Elite Network Services Ltd provides practical recycling support for customers who need scrap waste collected, assessed, sorted or recovered.</p>
         </div>
 
-        <div class="services-grid">
-          <div class="service-card">
-            <div class="service-number">01</div>
-            <h3>Scrap Waste Recycling</h3>
-            <p>Support with recyclable scrap waste from commercial, domestic and industrial customers.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">02</div>
-            <h3>Material Recovery</h3>
-            <p>Sorting and recovery of usable materials from suitable waste streams wherever possible.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">03</div>
-            <h3>Commercial Recycling</h3>
-            <p>Recycling support for offices, workshops, trades, yards, warehouses and business premises.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">04</div>
-            <h3>Industrial Scrap Handling</h3>
-            <p>Support with recyclable industrial scrap, surplus materials and site clearance enquiries.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">05</div>
-            <h3>Non-Hazardous Waste Collection</h3>
-            <p>Collection support for suitable non-hazardous recyclable waste, subject to assessment.</p>
-          </div>
-
-          <div class="service-card">
-            <div class="service-number">06</div>
-            <h3>Waste & Scrap Brokerage</h3>
-            <p>Helping customers find practical routes for recyclable materials, scrap and reusable waste.</p>
-          </div>
+        <div class="grid-3">
+          <div class="card"><div class="num">01</div><h3>Scrap Waste Recycling</h3><p>Support with recyclable scrap waste from commercial, industrial and domestic customers.</p></div>
+          <div class="card"><div class="num">02</div><h3>Material Recovery</h3><p>Helping recover reusable and recyclable materials from suitable waste streams.</p></div>
+          <div class="card"><div class="num">03</div><h3>Commercial Recycling</h3><p>Recycling support for businesses, yards, workshops, offices, trades and warehouses.</p></div>
+          <div class="card"><div class="num">04</div><h3>Industrial Scrap</h3><p>Support with surplus materials, industrial scrap and site recycling enquiries.</p></div>
+          <div class="card"><div class="num">05</div><h3>Non-Hazardous Waste</h3><p>Collection support for suitable non-hazardous recyclable waste, subject to assessment.</p></div>
+          <div class="card"><div class="num">06</div><h3>Scrap & Waste Brokerage</h3><p>Helping customers find practical recycling routes for reusable waste and scrap materials.</p></div>
         </div>
       </div>
     </section>
 
-    <section id="about" class="dark-section">
+    <section id="materials" class="materials">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Materials</p>
+          <h2>Materials we can discuss</h2>
+          <p>Send photos and details of the material so we can advise whether it is suitable for collection or recycling support.</p>
+        </div>
+
+        <div class="material-grid">
+          <div class="material">Scrap Metal<small>Ferrous and mixed metal enquiries</small></div>
+          <div class="material">Cables<small>Recyclable cable and wiring waste</small></div>
+          <div class="material">Mixed Scrap<small>General recyclable scrap materials</small></div>
+          <div class="material">Commercial Waste<small>Suitable business recycling streams</small></div>
+          <div class="material">Industrial Materials<small>Workshop and site materials</small></div>
+          <div class="material">Warehouse Clearances<small>Recyclable surplus materials</small></div>
+          <div class="material">Non-Hazardous Waste<small>Subject to assessment</small></div>
+          <div class="material">Other Materials<small>Send details for review</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="dark">
       <div class="container split">
         <div>
-          <p class="eyebrow">About us</p>
-          <h2>Responsible scrap waste recycling with a professional approach.</h2>
+          <p class="eyebrow">About</p>
+          <h2>Professional, responsive and recycling focused.</h2>
           <p>
-            Elite Network Services Ltd is focused on scrap waste recycling and material recovery. Our aim is to provide a reliable service that helps customers manage recyclable waste efficiently.
+            Elite Network Services Ltd is focused on scrap waste recycling and material recovery. The company works with customers who need a reliable, straightforward service for recyclable waste and scrap material enquiries.
           </p>
           <p>
-            We work with customers who need clear communication, simple quoting and practical support for scrap, recyclable materials and non-hazardous waste enquiries.
+            Our approach is simple: understand the material, assess the best recycling route, communicate clearly and arrange practical next steps where suitable.
           </p>
           <p>
-            Whether you are a business, tradesperson, industrial site or domestic customer, we welcome enquiries and will advise on the best next step.
+            We welcome enquiries from commercial, industrial and domestic customers.
           </p>
         </div>
 
         <div class="info-box">
-          <div class="info-row">
-            <span>Company Name</span>
-            <strong>Elite Network Services Ltd</strong>
-          </div>
-          <div class="info-row">
-            <span>Company Number</span>
-            <strong>15265839</strong>
-          </div>
-          <div class="info-row">
-            <span>Main Activity</span>
-            <strong>Scrap Waste Recycling</strong>
-          </div>
-          <div class="info-row">
-            <span>Phone</span>
-            <strong>07553 337751</strong>
-          </div>
-          <div class="info-row">
-            <span>Email</span>
-            <strong>elite.network.services@hotmail.com</strong>
-          </div>
+          <div class="info-row"><span>Company Name</span><strong>Elite Network Services Ltd</strong></div>
+          <div class="info-row"><span>Company Number</span><strong>15265839</strong></div>
+          <div class="info-row"><span>Main Focus</span><strong>Scrap Waste Recycling</strong></div>
+          <div class="info-row"><span>Phone</span><strong>07553 337751</strong></div>
+          <div class="info-row"><span>Email</span><strong>elite.network.services@hotmail.com</strong></div>
         </div>
       </div>
     </section>
 
-    <section id="process">
+    <section>
       <div class="container">
         <div class="section-heading">
           <p class="eyebrow">How it works</p>
-          <h2>A simple process from enquiry to collection</h2>
-          <p>
-            We make it easy to discuss your recycling requirement and understand the next steps.
-          </p>
+          <h2>A simple process from enquiry to recycling.</h2>
         </div>
 
-        <div class="process-grid">
-          <div class="step">
-            <span>1</span>
-            <h3>Contact Us</h3>
-            <p>Call or email with details of the material, quantity and location.</p>
-          </div>
-
-          <div class="step">
-            <span>2</span>
-            <h3>Assessment</h3>
-            <p>We review the type of scrap or recyclable waste and your collection needs.</p>
-          </div>
-
-          <div class="step">
-            <span>3</span>
-            <h3>Quote</h3>
-            <p>We provide clear guidance or a quote depending on the material and service required.</p>
-          </div>
-
-          <div class="step">
-            <span>4</span>
-            <h3>Collection</h3>
-            <p>Where suitable, collection or recycling support is arranged professionally.</p>
-          </div>
+        <div class="process">
+          <div class="step"><span>1</span><h3>Contact</h3><p>Call or email with material details, photos, quantity and location.</p></div>
+          <div class="step"><span>2</span><h3>Assess</h3><p>We review the material type and whether it is suitable for recycling support.</p></div>
+          <div class="step"><span>3</span><h3>Quote</h3><p>You receive clear guidance or a quote based on the job requirements.</p></div>
+          <div class="step"><span>4</span><h3>Collect</h3><p>Where suitable, collection or recycling support is arranged professionally.</p></div>
         </div>
       </div>
     </section>
@@ -828,30 +295,56 @@
     <section id="company" class="compliance">
       <div class="container split">
         <div>
-          <p class="eyebrow">Company information</p>
-          <h2>Built to show customers they are dealing with a genuine company.</h2>
-          <p>
-            A professional online presence helps customers, suppliers and partners quickly understand who the company is, what it does and how to make contact.
-          </p>
+          <p class="eyebrow">Trust & compliance</p>
+          <h2>Clear company information for customers and suppliers.</h2>
+          <p>A professional online presence helps customers confirm they are dealing with a genuine UK business.</p>
 
           <ul class="check-list">
             <li>Registered UK limited company</li>
-            <li>Company number shown clearly</li>
+            <li>Company number displayed clearly</li>
             <li>Direct phone and email contact details</li>
-            <li>Clear service descriptions</li>
-            <li>Quote request section for new enquiries</li>
-            <li>Professional recycling and recovery messaging</li>
+            <li>Professional recycling service descriptions</li>
+            <li>Clear quote request process</li>
+            <li>Compliance-aware waste handling messaging</li>
           </ul>
         </div>
 
         <div class="notice">
-          <h3>Compliance note</h3>
+          <h3>Important compliance note</h3>
           <p>
-            Businesses that carry, broker, deal in or dispose of waste may need the correct Environment Agency registration, waste carrier registration, scrap metal dealer licence or other permissions depending on the exact activity.
+            Businesses that transport, buy, sell, broker or arrange waste may need the correct Environment Agency waste carrier, broker or dealer registration.
           </p>
           <p>
-            Customers should confirm requirements before operating, collecting or handling controlled waste.
+            Scrap metal dealers in England and Wales may also need a council-issued site or mobile collector licence.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">FAQs</p>
+          <h2>Common questions</h2>
+        </div>
+
+        <div class="faq-grid">
+          <details>
+            <summary>Do you collect scrap waste?</summary>
+            <p>Collection may be available depending on the material, quantity and location. Contact us with photos and details.</p>
+          </details>
+          <details>
+            <summary>Do you work with businesses?</summary>
+            <p>Yes. We welcome commercial, industrial, trade and warehouse recycling enquiries.</p>
+          </details>
+          <details>
+            <summary>What information should I send?</summary>
+            <p>Please send material type, approximate quantity, location, photos and your preferred collection timescale.</p>
+          </details>
+          <details>
+            <summary>Do you handle hazardous waste?</summary>
+            <p>This website focuses on scrap waste recycling and suitable non-hazardous recyclable materials. Hazardous waste enquiries must be assessed separately.</p>
+          </details>
         </div>
       </div>
     </section>
@@ -860,9 +353,9 @@
       <div class="container cta-inner">
         <div>
           <h2>Have scrap or recyclable waste?</h2>
-          <p>Contact Elite Network Services Ltd today to discuss your requirements.</p>
+          <p>Contact Elite Network Services Ltd today for a straightforward quote.</p>
         </div>
-        <a href="#contact" class="btn btn-outline">Request a Quote</a>
+        <a href="#contact" class="btn btn-light">Request a Quote</a>
       </div>
     </section>
 
@@ -871,61 +364,44 @@
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Request a quote today</h2>
-          <p>
-            Send details of the scrap or recyclable waste, approximate quantity, location and preferred collection time.
-          </p>
+          <p>Send details of the material, approximate quantity, location and photos where possible.</p>
 
           <div class="contact-methods">
-            <a href="tel:07553337751">
-              <strong>Phone</strong>
-              <span>07553 337751</span>
-            </a>
-
-            <a href="mailto:elite.network.services@hotmail.com">
-              <strong>Email</strong>
-              <span>elite.network.services@hotmail.com</span>
-            </a>
+            <a href="tel:07553337751"><strong>Phone</strong><span>07553 337751</span></a>
+            <a href="mailto:elite.network.services@hotmail.com"><strong>Email</strong><span>elite.network.services@hotmail.com</span></a>
           </div>
         </div>
 
         <form action="mailto:elite.network.services@hotmail.com" method="post" enctype="text/plain">
-          <label>
-            Your Name
+          <label>Your Name
             <input type="text" name="name" placeholder="Your name" />
           </label>
 
-          <label>
-            Phone Number
+          <label>Phone Number
             <input type="tel" name="phone" placeholder="Your phone number" />
           </label>
 
-          <label>
-            Email Address
+          <label>Email Address
             <input type="email" name="email" placeholder="Your email address" />
           </label>
 
-          <label>
-            Service Required
+          <label>Service Required
             <select name="service">
               <option>Scrap waste recycling</option>
               <option>Material recovery</option>
-              <option>Commercial recycling support</option>
+              <option>Commercial recycling</option>
               <option>Industrial scrap handling</option>
               <option>Non-hazardous waste collection</option>
               <option>Other enquiry</option>
             </select>
           </label>
 
-          <label>
-            Enquiry Details
-            <textarea name="message" rows="6" placeholder="Tell us what material you have, approximate quantity and location"></textarea>
+          <label>Enquiry Details
+            <textarea name="message" rows="6" placeholder="Tell us what material you have, approximate quantity, location and collection requirements"></textarea>
           </label>
 
           <button type="submit" class="btn btn-primary">Send Enquiry</button>
-
-          <p class="form-note">
-            This form opens the customer's email app. For a fully live form, connect the site to a form service after deployment.
-          </p>
+          <p class="form-note">This form opens the customer’s email app. A live form can be connected after deployment.</p>
         </form>
       </div>
     </section>
@@ -937,7 +413,6 @@
         <strong>Elite Network Services Ltd</strong>
         <p>Scrap Waste Recycling & Material Recovery Services</p>
       </div>
-
       <div>
         <p>Company No. 15265839</p>
         <p>Phone: 07553 337751</p>
