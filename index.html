@@ -5,25 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Elite Network Services Ltd | Scrap Waste Recycling & Material Recovery</title>
-  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, non-ferrous metal recovery, commercial recycling support and material recovery services." />
+  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste recycling enquiries." />
 
   <style>
     :root{
       --black:#07100d;
       --black2:#101b16;
+      --black3:#16251f;
       --green:#2f7d4f;
       --green2:#75b66b;
       --gold:#d7ad59;
       --cream:#f4f1e8;
       --white:#ffffff;
       --grey:#66736b;
+      --soft:#edf2ea;
       --line:#dce4db;
-      --shadow:0 30px 90px rgba(7,16,13,.18);
+      --shadow:0 30px 90px rgba(7,16,13,.16);
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
 
-    html{scroll-behavior:smooth}
+    html{
+      scroll-behavior:smooth;
+    }
 
     body{
       font-family:Arial,Helvetica,sans-serif;
@@ -33,10 +41,13 @@
       overflow-x:hidden;
     }
 
-    a{text-decoration:none;color:inherit}
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
 
     .container{
-      width:min(1200px,calc(100% - 32px));
+      width:min(1180px,calc(100% - 32px));
       margin:auto;
     }
 
@@ -44,13 +55,13 @@
       position:sticky;
       top:0;
       z-index:100;
-      background:rgba(244,241,232,.94);
+      background:rgba(244,241,232,.96);
       backdrop-filter:blur(16px);
       border-bottom:1px solid rgba(7,16,13,.08);
     }
 
     .nav{
-      height:88px;
+      height:86px;
       display:flex;
       align-items:center;
       justify-content:space-between;
@@ -64,15 +75,14 @@
     }
 
     .brand-mark{
-      width:66px;
-      height:66px;
-      border-radius:50%;
-      position:relative;
+      width:62px;
+      height:62px;
+      border-radius:18px;
+      background:linear-gradient(135deg,var(--black),var(--green));
       display:grid;
       place-items:center;
-      background:
-        conic-gradient(from 20deg,var(--gold),var(--green2),var(--green),var(--gold));
-      box-shadow:0 18px 45px rgba(47,125,79,.28);
+      position:relative;
+      box-shadow:0 18px 40px rgba(47,125,79,.25);
       overflow:hidden;
       flex-shrink:0;
     }
@@ -80,59 +90,52 @@
     .brand-mark:before{
       content:"";
       position:absolute;
-      inset:7px;
-      border-radius:50%;
-      background:linear-gradient(135deg,var(--black),#183224);
+      inset:8px;
+      border:2px solid rgba(215,173,89,.7);
+      border-radius:14px;
     }
 
-    .brand-mark:after{
-      content:"";
-      position:absolute;
-      width:32px;
-      height:32px;
-      border:4px solid var(--gold);
-      border-left-color:transparent;
-      border-bottom-color:var(--green2);
-      border-radius:50%;
-      z-index:2;
-      transform:rotate(-18deg);
-    }
-
-    .brand-logo-text{
+    .brand-mark span{
       position:relative;
-      z-index:3;
-      font-size:12px;
-      font-weight:900;
+      z-index:2;
       color:#fff;
+      font-size:16px;
+      font-weight:900;
       letter-spacing:-1px;
     }
 
     .brand strong{
       display:block;
-      font-size:20px;
+      font-size:19px;
       line-height:1;
-      letter-spacing:1.2px;
+      letter-spacing:.5px;
       text-transform:uppercase;
     }
 
-    .brand span{
+    .brand small{
       display:block;
       color:var(--grey);
       font-size:12px;
-      letter-spacing:1px;
+      letter-spacing:1.2px;
       text-transform:uppercase;
-      margin-top:5px;
+      margin-top:6px;
     }
 
     nav{
       display:flex;
       align-items:center;
-      gap:22px;
-      font-weight:800;
+      gap:24px;
       font-size:14px;
+      font-weight:800;
     }
 
-    nav a:hover{color:var(--green)}
+    nav a{
+      color:#25332d;
+    }
+
+    nav a:hover{
+      color:var(--green);
+    }
 
     .nav-cta{
       background:var(--black);
@@ -143,59 +146,46 @@
 
     .hero{
       position:relative;
-      min-height:calc(100vh - 88px);
-      padding:88px 0 74px;
-      display:flex;
-      align-items:center;
+      padding:104px 0 84px;
       background:
-        radial-gradient(circle at 12% 15%,rgba(117,182,107,.30),transparent 30%),
-        radial-gradient(circle at 88% 12%,rgba(215,173,89,.24),transparent 35%),
+        radial-gradient(circle at 14% 18%,rgba(117,182,107,.24),transparent 32%),
+        radial-gradient(circle at 86% 12%,rgba(215,173,89,.18),transparent 34%),
         linear-gradient(180deg,#fff 0%,var(--cream) 100%);
       overflow:hidden;
     }
 
-    .hero:before{
-      content:"";
-      position:absolute;
-      inset:auto -120px -180px auto;
-      width:520px;
-      height:520px;
-      border-radius:50%;
-      background:rgba(47,125,79,.12);
-      filter:blur(2px);
-    }
-
     .hero-grid{
       display:grid;
-      grid-template-columns:1.05fr .95fr;
-      gap:58px;
+      grid-template-columns:1.1fr .9fr;
+      gap:56px;
       align-items:center;
-      position:relative;
-      z-index:2;
     }
 
     .eyebrow{
       color:var(--green);
       text-transform:uppercase;
-      letter-spacing:2.4px;
+      letter-spacing:2.3px;
       font-size:12px;
       font-weight:900;
       margin-bottom:16px;
     }
 
     h1{
-      font-size:clamp(46px,6.6vw,88px);
-      line-height:.92;
+      font-size:clamp(46px,6.5vw,84px);
+      line-height:.93;
       letter-spacing:-4px;
       margin-bottom:26px;
+      max-width:850px;
     }
 
-    .highlight{color:var(--green)}
+    h1 span{
+      color:var(--green);
+    }
 
     .lead{
       font-size:21px;
-      max-width:720px;
       color:#4b5a52;
+      max-width:720px;
       margin-bottom:32px;
     }
 
@@ -215,7 +205,6 @@
       border-radius:999px;
       font-weight:900;
       border:1px solid transparent;
-      cursor:pointer;
       transition:.25s ease;
     }
 
@@ -251,72 +240,105 @@
       font-size:14px;
     }
 
-    .visual{
-      position:relative;
-      min-height:620px;
-    }
-
-    .visual-card{
-      position:absolute;
-      inset:40px 0 auto auto;
-      width:min(100%,560px);
-      height:500px;
-      border-radius:40px;
-      background:
-        radial-gradient(circle at 22% 24%,rgba(215,173,89,.45),transparent 18%),
-        radial-gradient(circle at 70% 68%,rgba(117,182,107,.26),transparent 25%),
-        linear-gradient(135deg,#18261f 0%,#314d39 45%,#101b16 100%);
+    .hero-panel{
+      background:linear-gradient(135deg,var(--black),var(--black3));
+      border-radius:34px;
+      padding:34px;
+      color:#fff;
       box-shadow:var(--shadow);
+      position:relative;
       overflow:hidden;
     }
 
-    .visual-card:before{
+    .hero-panel:before{
       content:"";
       position:absolute;
-      inset:0;
-      background:
-        repeating-linear-gradient(120deg,rgba(255,255,255,.08) 0 2px,transparent 2px 22px),
-        repeating-linear-gradient(30deg,rgba(255,255,255,.05) 0 2px,transparent 2px 30px);
-      opacity:.34;
+      right:-110px;
+      top:-110px;
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      background:rgba(117,182,107,.18);
     }
 
-    .metal-stack{
+    .hero-panel:after{
+      content:"";
       position:absolute;
-      left:46px;
-      bottom:58px;
-      right:46px;
-      display:grid;
-      gap:12px;
+      left:-80px;
+      bottom:-80px;
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      background:rgba(215,173,89,.14);
+    }
+
+    .panel-content{
+      position:relative;
       z-index:2;
     }
 
-    .beam{
-      height:58px;
-      border-radius:14px;
-      background:linear-gradient(90deg,#d5d9d2,#6d756d,#f1f2ec);
-      box-shadow:inset 0 2px 0 rgba(255,255,255,.55),0 12px 22px rgba(0,0,0,.2);
+    .panel-content h2{
+      font-size:34px;
+      line-height:1.05;
+      margin-bottom:18px;
+      letter-spacing:-1px;
     }
 
-    .beam:nth-child(2){width:86%;margin-left:auto;background:linear-gradient(90deg,#6d3b21,#d18445,#f0b070)}
-    .beam:nth-child(3){width:72%;background:linear-gradient(90deg,#8f732d,#d7ad59,#f2d98a)}
-
-    .floating{
-      position:absolute;
-      background:rgba(255,255,255,.94);
-      border:1px solid rgba(255,255,255,.7);
-      border-radius:24px;
-      padding:20px;
-      box-shadow:0 20px 50px rgba(7,16,13,.18);
-      z-index:3;
+    .panel-list{
+      display:grid;
+      gap:14px;
+      margin:24px 0;
     }
 
-    .floating strong{display:block;font-size:24px}
-    .floating span{color:var(--grey);font-size:13px;font-weight:800}
+    .panel-list div{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      color:#e8f0e9;
+      font-weight:700;
+    }
 
-    .float-one{left:0;top:0}
-    .float-two{right:0;bottom:0}
-    .float-three{left:26px;bottom:116px;background:var(--black);color:#fff}
-    .float-three span{color:#cbd8ce}
+    .tick{
+      width:24px;
+      height:24px;
+      border-radius:50%;
+      background:var(--green);
+      color:#fff;
+      display:grid;
+      place-items:center;
+      flex-shrink:0;
+      font-size:14px;
+      font-weight:900;
+    }
+
+    .metrics{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .metric{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:18px;
+      padding:18px;
+    }
+
+    .metric strong{
+      display:block;
+      font-size:25px;
+      color:var(--gold);
+      line-height:1;
+      margin-bottom:6px;
+    }
+
+    .metric span{
+      font-size:12px;
+      color:#d7e1d8;
+      font-weight:800;
+      text-transform:uppercase;
+    }
 
     .ticker{
       background:var(--black);
@@ -334,26 +356,30 @@
       letter-spacing:.5px;
     }
 
-    .ticker-track span{color:var(--gold)}
+    .ticker-track span{
+      color:var(--gold);
+    }
 
     @keyframes scroll{
       from{transform:translateX(0)}
       to{transform:translateX(-50%)}
     }
 
-    section{padding:96px 0}
+    section{
+      padding:92px 0;
+    }
 
     .section-head{
-      max-width:820px;
-      margin-bottom:44px;
+      max-width:840px;
+      margin-bottom:42px;
     }
 
     .section-head h2,
     .split h2,
     .contact h2{
-      font-size:clamp(36px,4.2vw,60px);
-      line-height:1.02;
-      letter-spacing:-2.5px;
+      font-size:clamp(34px,4.2vw,58px);
+      line-height:1.03;
+      letter-spacing:-2px;
       margin-bottom:16px;
     }
 
@@ -368,55 +394,58 @@
       gap:20px;
     }
 
-    .service{
+    .card{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:32px;
-      padding:32px;
-      min-height:310px;
+      border-radius:28px;
+      padding:30px;
+      min-height:260px;
       box-shadow:0 16px 40px rgba(7,16,13,.06);
+      transition:.25s ease;
       position:relative;
       overflow:hidden;
-      transition:.25s ease;
     }
 
-    .service:hover{
-      transform:translateY(-6px);
-      box-shadow:var(--shadow);
-    }
-
-    .service:after{
+    .card:after{
       content:"";
       position:absolute;
-      right:-38px;
-      top:-38px;
+      right:-40px;
+      top:-40px;
       width:120px;
       height:120px;
       border-radius:50%;
-      background:rgba(117,182,107,.13);
+      background:rgba(117,182,107,.12);
     }
 
-    .icon{
-      width:58px;
-      height:58px;
-      border-radius:18px;
-      background:linear-gradient(135deg,#eef7ea,#fff);
-      border:1px solid var(--line);
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:var(--shadow);
+    }
+
+    .card-number{
+      width:48px;
+      height:48px;
+      border-radius:16px;
+      background:#edf5e9;
+      color:var(--green);
       display:grid;
       place-items:center;
-      margin-bottom:22px;
+      font-weight:900;
+      margin-bottom:20px;
     }
 
-    .icon svg{
-      width:30px;
-      height:30px;
-      stroke:var(--green);
-      stroke-width:2.5;
-      fill:none;
+    .card h3{
+      font-size:23px;
+      margin-bottom:10px;
+      position:relative;
+      z-index:2;
     }
 
-    .service h3{font-size:24px;margin-bottom:12px}
-    .service p{color:var(--grey)}
+    .card p{
+      color:var(--grey);
+      position:relative;
+      z-index:2;
+    }
 
     .materials{
       background:#fff;
@@ -442,25 +471,15 @@
       box-shadow:0 18px 44px rgba(7,16,13,.1);
     }
 
-    .material strong{display:block;font-size:20px;margin-bottom:8px}
-    .material span{color:var(--grey)}
-
-    .stats{
-      display:grid;
-      grid-template-columns:repeat(4,1fr);
-      gap:16px;
-      margin-top:34px;
+    .material strong{
+      display:block;
+      font-size:20px;
+      margin-bottom:8px;
     }
 
-    .stat{
-      background:#fff;
-      border:1px solid var(--line);
-      border-radius:26px;
-      padding:26px;
+    .material span{
+      color:var(--grey);
     }
-
-    .stat strong{display:block;font-size:36px;color:var(--green);line-height:1}
-    .stat span{color:var(--grey);font-weight:800}
 
     .dark{
       background:
@@ -476,59 +495,37 @@
       align-items:center;
     }
 
-    .dark p{color:#dbe6dc;margin-bottom:16px}
-
-    .image-panel{
-      height:560px;
-      border-radius:40px;
-      background:
-        radial-gradient(circle at 28% 22%,rgba(215,173,89,.42),transparent 19%),
-        radial-gradient(circle at 68% 68%,rgba(117,182,107,.28),transparent 26%),
-        linear-gradient(135deg,#2e4d38,#121f19 65%);
-      box-shadow:0 30px 90px rgba(0,0,0,.28);
-      position:relative;
-      overflow:hidden;
+    .dark p{
+      color:#dbe6dc;
+      margin-bottom:16px;
     }
 
-    .image-panel:before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:
-        repeating-linear-gradient(90deg,transparent 0 34px,rgba(255,255,255,.07) 34px 36px),
-        repeating-linear-gradient(0deg,transparent 0 34px,rgba(255,255,255,.06) 34px 36px);
-      opacity:.35;
-    }
-
-    .image-panel:after{
-      content:"";
-      position:absolute;
-      width:280px;
-      height:180px;
-      right:40px;
-      top:80px;
-      background:
-        linear-gradient(90deg,#8f4b25,#d18445,#f1b077);
+    .dark-box{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.13);
       border-radius:30px;
-      transform:rotate(-16deg);
-      box-shadow:0 30px 55px rgba(0,0,0,.28);
-      opacity:.86;
+      padding:32px;
     }
 
-    .image-panel .label{
-      position:absolute;
-      left:28px;
-      bottom:28px;
-      background:rgba(255,255,255,.94);
-      color:var(--black);
-      border-radius:24px;
-      padding:22px;
-      width:calc(100% - 56px);
-      z-index:2;
+    .dark-box-row{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:16px 0;
+      border-bottom:1px solid rgba(255,255,255,.12);
     }
 
-    .label strong{display:block;font-size:28px;line-height:1.05}
-    .label span{color:var(--grey);font-weight:800}
+    .dark-box-row:last-child{
+      border-bottom:none;
+    }
+
+    .dark-box-row span{
+      color:#c4d1c7;
+    }
+
+    .dark-box-row strong{
+      text-align:right;
+    }
 
     .process-grid{
       display:grid;
@@ -539,9 +536,8 @@
     .step{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:30px;
-      padding:30px;
-      position:relative;
+      border-radius:28px;
+      padding:28px;
     }
 
     .step-number{
@@ -553,26 +549,39 @@
       display:grid;
       place-items:center;
       font-weight:900;
-      margin-bottom:20px;
+      margin-bottom:18px;
     }
 
-    .step h3{font-size:22px;margin-bottom:8px}
-    .step p{color:var(--grey)}
+    .step h3{
+      font-size:22px;
+      margin-bottom:8px;
+    }
+
+    .step p{
+      color:var(--grey);
+    }
 
     .compliance{
-      background:#edf2ea;
+      background:var(--soft);
     }
 
     .notice{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:34px;
-      padding:34px;
+      border-radius:32px;
+      padding:32px;
       box-shadow:var(--shadow);
     }
 
-    .notice h3{font-size:30px;margin-bottom:14px}
-    .notice p{color:var(--grey);margin-bottom:14px}
+    .notice h3{
+      font-size:28px;
+      margin-bottom:14px;
+    }
+
+    .notice p{
+      color:var(--grey);
+      margin-bottom:12px;
+    }
 
     .checklist{
       list-style:none;
@@ -602,7 +611,7 @@
     details{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:24px;
+      border-radius:22px;
       padding:22px;
     }
 
@@ -636,7 +645,9 @@
       margin-bottom:8px;
     }
 
-    .cta p{color:#e7efe7}
+    .cta p{
+      color:#e7efe7;
+    }
 
     .contact-grid{
       display:grid;
@@ -654,7 +665,7 @@
     .contact-methods a{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:24px;
+      border-radius:22px;
       padding:20px;
       display:block;
       transition:.25s ease;
@@ -665,13 +676,21 @@
       box-shadow:0 18px 40px rgba(7,16,13,.1);
     }
 
-    .contact-methods strong{display:block;margin-bottom:4px}
-    .contact-methods span{color:var(--green);font-weight:900;word-break:break-word}
+    .contact-methods strong{
+      display:block;
+      margin-bottom:4px;
+    }
+
+    .contact-methods span{
+      color:var(--green);
+      font-weight:900;
+      word-break:break-word;
+    }
 
     form{
       background:#fff;
       border:1px solid var(--line);
-      border-radius:36px;
+      border-radius:34px;
       padding:34px;
       box-shadow:var(--shadow);
     }
@@ -686,13 +705,15 @@
       width:100%;
       margin-top:8px;
       border:1px solid var(--line);
-      border-radius:16px;
+      border-radius:15px;
       padding:15px;
       font:inherit;
       background:#fbfcf8;
     }
 
-    textarea{resize:vertical}
+    textarea{
+      resize:vertical;
+    }
 
     .form-note{
       font-size:13px;
@@ -712,7 +733,10 @@
       gap:24px;
     }
 
-    footer p{color:#aebbae;margin-top:4px}
+    footer p{
+      color:#aebbae;
+      margin-top:4px;
+    }
 
     .mobile-cta{
       display:none;
@@ -745,31 +769,90 @@
     }
 
     @media(max-width:960px){
-      nav{display:none}
-      .hero{min-height:auto}
-      .hero-grid,.split,.contact-grid{grid-template-columns:1fr}
-      .visual{min-height:520px}
-      .visual-card{left:0;right:0;width:100%;height:430px}
-      .grid-3{grid-template-columns:repeat(2,1fr)}
-      .material-grid,.stats,.process-grid,.faq-grid{grid-template-columns:repeat(2,1fr)}
-      .cta-inner,.footer-grid{display:block}
-      .mobile-cta{display:flex}
-      body{padding-bottom:78px}
+      nav{
+        display:none;
+      }
+
+      .hero{
+        padding:74px 0 64px;
+      }
+
+      .hero-grid,
+      .split,
+      .contact-grid{
+        grid-template-columns:1fr;
+      }
+
+      .grid-3{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .material-grid,
+      .process-grid,
+      .faq-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .metrics{
+        grid-template-columns:1fr;
+      }
+
+      .cta-inner,
+      .footer-grid{
+        display:block;
+      }
+
+      .mobile-cta{
+        display:flex;
+      }
+
+      body{
+        padding-bottom:78px;
+      }
     }
 
     @media(max-width:600px){
-      .container{width:min(100% - 24px,1200px)}
-      .hero,section{padding:60px 0}
-      h1{letter-spacing:-2px}
-      .buttons .btn{width:100%}
-      .grid-3,.material-grid,.stats,.process-grid,.faq-grid{grid-template-columns:1fr}
-      .visual{min-height:470px}
-      .visual-card{height:390px;border-radius:30px}
-      .float-two{display:none}
-      .brand strong{font-size:15px}
-      .brand span{font-size:10px}
-      .brand-mark{width:52px;height:52px}
-      .section-head h2,.split h2,.contact h2{letter-spacing:-1.5px}
+      .container{
+        width:min(100% - 24px,1180px);
+      }
+
+      section{
+        padding:64px 0;
+      }
+
+      h1{
+        letter-spacing:-2px;
+      }
+
+      .buttons .btn{
+        width:100%;
+      }
+
+      .grid-3,
+      .material-grid,
+      .process-grid,
+      .faq-grid{
+        grid-template-columns:1fr;
+      }
+
+      .brand strong{
+        font-size:15px;
+      }
+
+      .brand small{
+        font-size:10px;
+      }
+
+      .brand-mark{
+        width:52px;
+        height:52px;
+      }
+
+      .section-head h2,
+      .split h2,
+      .contact h2{
+        letter-spacing:-1.4px;
+      }
     }
   </style>
 </head>
@@ -779,11 +862,11 @@
     <div class="container nav">
       <a class="brand" href="#top">
         <div class="brand-mark">
-          <div class="brand-logo-text">ENS</div>
+          <span>ENS</span>
         </div>
         <div>
           <strong>Elite Network Services</strong>
-          <span>Scrap Waste Recycling & Material Recovery</span>
+          <small>Scrap Waste Recycling & Material Recovery</small>
         </div>
       </a>
 
@@ -802,7 +885,7 @@
       <div class="container hero-grid">
         <div>
           <p class="eyebrow">Registered UK Limited Company • Company No. 15265839</p>
-          <h1>Premium Scrap Waste Recycling <span class="highlight">& Material Recovery</span></h1>
+          <h1>Premium Scrap Waste Recycling <span>& Material Recovery</span></h1>
           <p class="lead">
             Elite Network Services Ltd helps businesses, trades, industrial sites and domestic customers move recyclable waste responsibly, quickly and professionally.
           </p>
@@ -820,30 +903,33 @@
           </div>
         </div>
 
-        <div class="visual">
-          <div class="visual-card">
-            <div class="metal-stack">
-              <div class="beam"></div>
-              <div class="beam"></div>
-              <div class="beam"></div>
+        <aside class="hero-panel">
+          <div class="panel-content">
+            <p class="eyebrow">Fast quote process</p>
+            <h2>Send the material details. We’ll advise the best next step.</h2>
+
+            <div class="panel-list">
+              <div><span class="tick">✓</span><p>Send photos, approximate quantity and location.</p></div>
+              <div><span class="tick">✓</span><p>We assess whether the material is suitable for recovery.</p></div>
+              <div><span class="tick">✓</span><p>You receive clear advice or a quote for next steps.</p></div>
+            </div>
+
+            <div class="metrics">
+              <div class="metric">
+                <strong>01</strong>
+                <span>Contact</span>
+              </div>
+              <div class="metric">
+                <strong>02</strong>
+                <span>Assess</span>
+              </div>
+              <div class="metric">
+                <strong>03</strong>
+                <span>Quote</span>
+              </div>
             </div>
           </div>
-
-          <div class="floating float-one">
-            <strong>Fast Quotes</strong>
-            <span>Send photos, quantity & location</span>
-          </div>
-
-          <div class="floating float-two">
-            <strong>Recycling First</strong>
-            <span>Recover value from waste streams</span>
-          </div>
-
-          <div class="floating float-three">
-            <strong>ENS</strong>
-            <span>Professional recycling support</span>
-          </div>
-        </div>
+        </aside>
       </div>
     </section>
 
@@ -859,56 +945,42 @@
         <div class="section-head">
           <p class="eyebrow">What we do</p>
           <h2>Built for customers who need waste dealt with properly.</h2>
-          <p>
-            A premium recycling service starts with clear communication, the right information, and a professional approach to every enquiry.
-          </p>
+          <p>A premium recycling service starts with clear communication, the right information, and a professional approach to every enquiry.</p>
         </div>
 
         <div class="grid-3">
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M4 7h16M6 7l1 13h10l1-13M9 7V5h6v2M9 11h6M9 15h6"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">01</div>
             <h3>Scrap Waste Recycling</h3>
             <p>Support with recyclable scrap waste from businesses, trades, industrial sites and domestic customers.</p>
           </article>
 
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M7 7h10v10H7zM4 4h4M16 4h4M4 20h4M16 20h4"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">02</div>
             <h3>Material Recovery</h3>
             <p>Helping recover reusable value from suitable waste streams, surplus materials and recyclable loads.</p>
           </article>
 
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 21v-7h6v7"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">03</div>
             <h3>Commercial Recycling</h3>
             <p>Recycling support for workshops, warehouses, yards, offices, trades and commercial premises.</p>
           </article>
 
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M4 17h16M6 17l2-8h8l2 8M9 9V5h6v4M8 21h2M14 21h2"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">04</div>
             <h3>Industrial Scrap Handling</h3>
             <p>Support for industrial scrap, site clearances, surplus metals and recyclable materials.</p>
           </article>
 
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M6 19h12M8 19V9l4-4 4 4v10M10 12h4"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">05</div>
             <h3>Non-Hazardous Waste</h3>
             <p>Collection enquiries for suitable non-hazardous recyclable waste, subject to assessment.</p>
           </article>
 
-          <article class="service">
-            <div class="icon">
-              <svg viewBox="0 0 24 24"><path d="M5 12a7 7 0 0 1 12-5l2 2M19 12a7 7 0 0 1-12 5l-2-2M17 7v4h-4M7 17v-4h4"/></svg>
-            </div>
+          <article class="card">
+            <div class="card-number">06</div>
             <h3>Scrap & Waste Brokerage</h3>
             <p>Helping customers find practical recycling routes for scrap, reusable materials and waste streams.</p>
           </article>
@@ -920,10 +992,8 @@
       <div class="container">
         <div class="section-head">
           <p class="eyebrow">Materials</p>
-          <h2>Send the material details. We’ll advise the best next step.</h2>
-          <p>
-            The more information you send, the quicker we can assess the enquiry. Photos, location and quantity help us quote accurately.
-          </p>
+          <h2>Clear support for recyclable waste and scrap materials.</h2>
+          <p>The more information you send, the quicker we can assess the enquiry. Photos, location and quantity help us quote accurately.</p>
         </div>
 
         <div class="material-grid">
@@ -936,13 +1006,6 @@
           <div class="material"><strong>Non-Hazardous Waste</strong><span>Subject to review, location and collection requirements.</span></div>
           <div class="material"><strong>Other Materials</strong><span>Send photos and details for assessment.</span></div>
         </div>
-
-        <div class="stats">
-          <div class="stat"><strong>01</strong><span>Send material details</span></div>
-          <div class="stat"><strong>02</strong><span>Receive assessment</span></div>
-          <div class="stat"><strong>03</strong><span>Get clear quote</span></div>
-          <div class="stat"><strong>04</strong><span>Arrange next steps</span></div>
-        </div>
       </div>
     </section>
 
@@ -951,22 +1014,17 @@
         <div>
           <p class="eyebrow">About Elite Network Services Ltd</p>
           <h2>A modern recycling company with a serious, professional presence.</h2>
-          <p>
-            Elite Network Services Ltd focuses on scrap waste recycling and material recovery for customers who need a responsive and straightforward service.
-          </p>
-          <p>
-            The business is designed around clear communication, practical waste handling, recycling-first thinking and trusted customer contact.
-          </p>
-          <p>
-            Whether you are a tradesperson, business, industrial site, warehouse, yard or domestic customer, we welcome enquiries and will advise on the next step.
-          </p>
+          <p>Elite Network Services Ltd focuses on scrap waste recycling and material recovery for customers who need a responsive and straightforward service.</p>
+          <p>The business is designed around clear communication, practical waste handling, recycling-first thinking and trusted customer contact.</p>
+          <p>Whether you are a tradesperson, business, industrial site, warehouse, yard or domestic customer, we welcome enquiries and will advise on the next step.</p>
         </div>
 
-        <div class="image-panel">
-          <div class="label">
-            <strong>Recycling-first material recovery</strong>
-            <span>Professional support for scrap and recyclable waste enquiries.</span>
-          </div>
+        <div class="dark-box">
+          <div class="dark-box-row"><span>Company Name</span><strong>Elite Network Services Ltd</strong></div>
+          <div class="dark-box-row"><span>Company Number</span><strong>15265839</strong></div>
+          <div class="dark-box-row"><span>Main Focus</span><strong>Scrap Waste Recycling</strong></div>
+          <div class="dark-box-row"><span>Phone</span><strong>07553 337751</strong></div>
+          <div class="dark-box-row"><span>Email</span><strong>elite.network.services@hotmail.com</strong></div>
         </div>
       </div>
     </section>
@@ -976,9 +1034,7 @@
         <div class="section-head">
           <p class="eyebrow">Process</p>
           <h2>Simple, clear and built around fast response.</h2>
-          <p>
-            A good recycling service should be easy to understand. Send the right details and we’ll guide the enquiry from there.
-          </p>
+          <p>A good recycling service should be easy to understand. Send the right details and we’ll guide the enquiry from there.</p>
         </div>
 
         <div class="process-grid">
@@ -995,9 +1051,7 @@
         <div>
           <p class="eyebrow">Trust & company details</p>
           <h2>Designed to reassure customers, suppliers and partners.</h2>
-          <p>
-            A strong website should make it clear who the business is, what it does, and how customers can make contact.
-          </p>
+          <p>A strong website should make it clear who the business is, what it does, and how customers can make contact.</p>
 
           <ul class="checklist">
             <li>Registered UK limited company</li>
@@ -1054,9 +1108,7 @@
         <div>
           <p class="eyebrow">Contact</p>
           <h2>Request a quote today</h2>
-          <p>
-            Tell us what material you have, where it is, and roughly how much there is. Photos help us assess the enquiry quickly.
-          </p>
+          <p>Tell us what material you have, where it is, and roughly how much there is. Photos help us assess the enquiry quickly.</p>
 
           <div class="contact-methods">
             <a href="tel:07553337751"><strong>Phone</strong><span>07553 337751</span></a>
@@ -1097,7 +1149,7 @@
     <div class="container footer-grid">
       <div>
         <strong>Elite Network Services Ltd</strong>
-        <p>Non-ferrous scrap recycling, material recovery and commercial waste support.</p>
+        <p>Scrap waste recycling, material recovery and commercial waste support.</p>
       </div>
 
       <div>
