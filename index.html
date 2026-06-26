@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Elite Network Services Ltd | Scrap Waste Recycling & Material Recovery</title>
-  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste recycling enquiries." />
+  <meta name="description" content="Elite Network Services Ltd provides scrap waste recycling, material recovery, commercial recycling support and non-hazardous waste recycling enquiries. Registered upper tier waste carrier and dealer CBDU526252." />
 
   <style>
     :root{
@@ -206,6 +206,7 @@
       font-weight:900;
       border:1px solid transparent;
       transition:.25s ease;
+      cursor:pointer;
     }
 
     .btn:hover{
@@ -583,6 +584,83 @@
       margin-bottom:12px;
     }
 
+    .license-card{
+      background:linear-gradient(135deg,#fff,var(--cream));
+      border:1px solid var(--line);
+      border-radius:32px;
+      padding:32px;
+      box-shadow:var(--shadow);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .license-card:before{
+      content:"";
+      position:absolute;
+      right:-70px;
+      top:-70px;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:rgba(47,125,79,.12);
+    }
+
+    .license-card h3{
+      font-size:30px;
+      line-height:1.1;
+      margin-bottom:14px;
+      position:relative;
+      z-index:2;
+    }
+
+    .license-card p{
+      color:var(--grey);
+      margin-bottom:12px;
+      position:relative;
+      z-index:2;
+    }
+
+    .license-details{
+      display:grid;
+      gap:10px;
+      margin:24px 0;
+      position:relative;
+      z-index:2;
+    }
+
+    .license-detail{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      padding:13px 0;
+      border-bottom:1px solid var(--line);
+    }
+
+    .license-detail span{
+      color:var(--grey);
+      font-weight:800;
+    }
+
+    .license-detail strong{
+      text-align:right;
+    }
+
+    .license-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      background:#edf5e9;
+      color:var(--green);
+      border:1px solid rgba(47,125,79,.2);
+      padding:10px 14px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:14px;
+      margin-bottom:16px;
+      position:relative;
+      z-index:2;
+    }
+
     .checklist{
       list-style:none;
       margin-top:24px;
@@ -853,6 +931,16 @@
       .contact h2{
         letter-spacing:-1.4px;
       }
+
+      .license-detail{
+        display:block;
+      }
+
+      .license-detail strong{
+        display:block;
+        text-align:left;
+        margin-top:4px;
+      }
     }
   </style>
 </head>
@@ -875,6 +963,7 @@
         <a href="#materials">Materials</a>
         <a href="#process">Process</a>
         <a href="#company">Trust</a>
+        <a href="#waste-carrier">Waste Carrier</a>
         <a href="#contact" class="nav-cta">Get a Quote</a>
       </nav>
     </div>
@@ -893,13 +982,15 @@
           <div class="buttons">
             <a href="tel:07553337751" class="btn btn-primary">Call 07553 337751</a>
             <a href="mailto:elite.network.services@hotmail.com" class="btn btn-light">Email for a Quote</a>
+            <a href="Waste Carriers License.pdf" class="btn btn-light" target="_blank" rel="noopener">View Waste Carrier Certificate</a>
           </div>
 
           <div class="trust-row">
             <span>Commercial & Domestic</span>
             <span>Scrap Waste</span>
             <span>Material Recovery</span>
-            <span>Fast Enquiry Response</span>
+            <span>Upper Tier Waste Carrier</span>
+            <span>Registration CBDU526252</span>
           </div>
         </div>
 
@@ -935,8 +1026,8 @@
 
     <div class="ticker">
       <div class="ticker-track">
-        <div>SCRAP METAL <span>•</span> MATERIAL RECOVERY <span>•</span> COMMERCIAL RECYCLING <span>•</span> INDUSTRIAL SCRAP <span>•</span> NON-HAZARDOUS WASTE <span>•</span></div>
-        <div>SCRAP METAL <span>•</span> MATERIAL RECOVERY <span>•</span> COMMERCIAL RECYCLING <span>•</span> INDUSTRIAL SCRAP <span>•</span> NON-HAZARDOUS WASTE <span>•</span></div>
+        <div>SCRAP METAL <span>•</span> MATERIAL RECOVERY <span>•</span> COMMERCIAL RECYCLING <span>•</span> UPPER TIER WASTE CARRIER <span>•</span> CBDU526252 <span>•</span></div>
+        <div>SCRAP METAL <span>•</span> MATERIAL RECOVERY <span>•</span> COMMERCIAL RECYCLING <span>•</span> UPPER TIER WASTE CARRIER <span>•</span> CBDU526252 <span>•</span></div>
       </div>
     </div>
 
@@ -1022,6 +1113,8 @@
         <div class="dark-box">
           <div class="dark-box-row"><span>Company Name</span><strong>Elite Network Services Ltd</strong></div>
           <div class="dark-box-row"><span>Company Number</span><strong>15265839</strong></div>
+          <div class="dark-box-row"><span>Waste Carrier Registration</span><strong>CBDU526252</strong></div>
+          <div class="dark-box-row"><span>Registered As</span><strong>Upper Tier Waste Carrier & Dealer</strong></div>
           <div class="dark-box-row"><span>Main Focus</span><strong>Scrap Waste Recycling</strong></div>
           <div class="dark-box-row"><span>Phone</span><strong>07553 337751</strong></div>
           <div class="dark-box-row"><span>Email</span><strong>elite.network.services@hotmail.com</strong></div>
@@ -1056,6 +1149,8 @@
           <ul class="checklist">
             <li>Registered UK limited company</li>
             <li>Company number displayed clearly</li>
+            <li>Upper tier waste carrier and dealer registration displayed</li>
+            <li>Waste carrier certificate available to view</li>
             <li>Direct phone and email contact details</li>
             <li>Professional service descriptions</li>
             <li>Clear quote request process</li>
@@ -1067,10 +1162,50 @@
           <h3>Company Information</h3>
           <p><strong>Company Name:</strong> Elite Network Services Ltd</p>
           <p><strong>Company Number:</strong> 15265839</p>
+          <p><strong>Waste Carrier Registration:</strong> CBDU526252</p>
+          <p><strong>Registered As:</strong> Upper tier waste carrier and dealer</p>
           <p><strong>Main Focus:</strong> Scrap Waste Recycling & Material Recovery</p>
           <p><strong>Phone:</strong> 07553 337751</p>
           <p><strong>Email:</strong> elite.network.services@hotmail.com</p>
           <p>Businesses that transport, broker, deal in, buy, sell or store waste/scrap may need appropriate registrations, licences or permissions depending on the exact activity.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="waste-carrier">
+      <div class="container split">
+        <div>
+          <p class="eyebrow">Waste carrier certificate</p>
+          <h2>Registered upper tier waste carrier and dealer.</h2>
+          <p>
+            Elite Network Services Limited is registered with the Environment Agency as an upper tier waste carrier and dealer.
+            Customers, suppliers and partners can view the certificate using the button below.
+          </p>
+          <p>
+            Please make sure the certificate PDF is uploaded into the same website folder as this index file.
+          </p>
+
+          <div class="buttons">
+            <a href="Waste Carriers License.pdf" class="btn btn-primary" target="_blank" rel="noopener">View Certificate PDF</a>
+            <a href="#contact" class="btn btn-light">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="license-card">
+          <div class="license-badge">✓ Environment Agency Registered</div>
+          <h3>Waste Carrier Registration</h3>
+          <p>Certificate of Registration under the Waste (England and Wales) Regulations 2011.</p>
+
+          <div class="license-details">
+            <div class="license-detail"><span>Registered Carrier</span><strong>Elite Network Services Limited</strong></div>
+            <div class="license-detail"><span>Registration Number</span><strong>CBDU526252</strong></div>
+            <div class="license-detail"><span>Registered As</span><strong>Upper tier waste carrier and dealer</strong></div>
+            <div class="license-detail"><span>Date of Registration</span><strong>11 March 2024</strong></div>
+            <div class="license-detail"><span>Expiry Date</span><strong>11 March 2027</strong></div>
+            <div class="license-detail"><span>Business Address</span><strong>124 Church Hill, Loughton, IG10 1LH</strong></div>
+          </div>
+
+          <a href="Waste Carriers License.pdf" class="btn btn-primary" target="_blank" rel="noopener">Open Waste Carrier Certificate</a>
         </div>
       </div>
     </section>
@@ -1084,6 +1219,7 @@
 
         <div class="faq-grid">
           <details><summary>Do you collect scrap waste?</summary><p>Collection may be available depending on the material, quantity and location. Send photos and details for assessment.</p></details>
+          <details><summary>Are you a registered waste carrier?</summary><p>Yes. Elite Network Services Limited is registered as an upper tier waste carrier and dealer. Registration number: CBDU526252.</p></details>
           <details><summary>Do you work with commercial customers?</summary><p>Yes. We welcome enquiries from businesses, trades, warehouses, industrial sites, yards and commercial premises.</p></details>
           <details><summary>What information should I send?</summary><p>Please send the material type, approximate quantity, photos, location and preferred collection timescale.</p></details>
           <details><summary>Do you handle hazardous waste?</summary><p>This site focuses on scrap waste recycling and suitable non-hazardous recyclable materials. Hazardous waste would need separate assessment.</p></details>
@@ -1113,6 +1249,7 @@
           <div class="contact-methods">
             <a href="tel:07553337751"><strong>Phone</strong><span>07553 337751</span></a>
             <a href="mailto:elite.network.services@hotmail.com"><strong>Email</strong><span>elite.network.services@hotmail.com</span></a>
+            <a href="Waste Carriers License.pdf" target="_blank" rel="noopener"><strong>Waste Carrier Certificate</strong><span>View Registration CBDU526252</span></a>
           </div>
         </div>
 
@@ -1154,6 +1291,8 @@
 
       <div>
         <p>Company No. 15265839</p>
+        <p>Waste Carrier Registration: CBDU526252</p>
+        <p>Upper Tier Waste Carrier & Dealer</p>
         <p>Phone: 07553 337751</p>
         <p>Email: elite.network.services@hotmail.com</p>
       </div>
